@@ -34,42 +34,44 @@ export const DisplayForm = () => {
   return (
     <div className="form-container">
       <form onSubmit={handelFormData} className="form-details">
-        <label>
-          Title
-          <input type="text" name="title" />
-        </label>
-        <label>
-          Year:
-          <input type="text" name="year" />
-        </label>
-        <label>
-          Genre:
-          <input type="text" name="genre" />
-        </label>
-        <label>
-          rating:
-          <input type="text" name="rating" />
-        </label>
-        <label>
-          Director:
-          <input type="text" name="director" />
-        </label>
-        <label>
-          Writer:
-          <input type="text" name="writer" />
-        </label>
-        <label>
-          Cast:
-          <input type="text" name="cast" />
-        </label>
-        <label>
-          Summary:
-          <input type="textarea" name="summary" />
-        </label>
-        <label>
-          Image Url:
-          <input type="text" name="image" />
-        </label>
+        <div className="input-lable">
+          <label>
+            Title
+            <input type="text" name="title" />
+          </label>
+          <label>
+            Year:
+            <input type="text" name="year" />
+          </label>
+          <label>
+            Genre:
+            <input type="text" name="genre" />
+          </label>
+          <label>
+            rating:
+            <input type="text" name="rating" />
+          </label>
+          <label>
+            Director:
+            <input type="text" name="director" />
+          </label>
+          <label>
+            Writer:
+            <input type="text" name="writer" />
+          </label>
+          <label>
+            Cast:
+            <input type="text" name="cast" />
+          </label>
+          <label>
+            Summary:
+            <input type="textarea" name="summary" />
+          </label>
+          <label>
+            Image Url:
+            <input type="text" name="image" />
+          </label>
+        </div>{" "}
         <button>Add Movie</button>
       </form>
     </div>

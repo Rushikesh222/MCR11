@@ -67,15 +67,18 @@ button:hover {
   width: 500px;
 }
 label {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  margin: 15px;
+  text-align: center;
+  justify-content: center;
+  text-transform: capitalize;
+  margin: 10px;
 }
-label,
+.input-lable {
+  width: 250px;
+  margin: 10px;
+}
 input {
   width: 200px;
   height: 30px;
-  margin-left: 20px;
+  border-radius: 15px;
+  border: 2px solid gray;
 }
