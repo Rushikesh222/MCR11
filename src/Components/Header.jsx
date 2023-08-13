@@ -12,7 +12,12 @@ export const Header = () => {
   return (
     <div className="Header-contianer">
       <h1>IMDB</h1>
-      <input type="text" onChange={handleSearch} className="search-box" />
+      <input
+        type="text"
+        onChange={handleSearch}
+        className="search-box"
+        placeholder="Search a movie by its title, cast or director"
+      />
       <div className="links">
         <NavLink to="/">Movies</NavLink>
         <NavLink to="/watchlist">Watch List</NavLink>

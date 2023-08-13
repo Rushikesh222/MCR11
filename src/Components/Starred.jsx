@@ -1,30 +1,23 @@
-import { useNavigate } from "react-router-dom";
 import { useData } from "../Context/CardContext";
-import "./DisplayCard.css";
-export const DisplayData = () => {
+
+export const StarredCard = () => {
   const { state, dispatch } = useData();
-  const navigate = useNavigate();
-  const handleWishlist = () => {};
   return (
-    <div className="display-Container">
-      {state?.searchData?.map((items) => {
+    <div>
+      {state?.Starred?.map((items) => {
         const { id, title, summary, imageURL } = items;
         return (
-          <div
-            className="card-block"
-            onClick={() => navigate(`/Details/${id}`)}
-            key={id}
-          >
+          <div className="card-block" key={id}>
             <img className="image" src={imageURL} />
             <h2>{title}</h2>
             <p>{summary}</p>
-            <div key={id} className="button-blocks">
+            <div className="button-blocks">
               <button
                 onClick={() => {
-                  dispatch({ type: "ADD_STARRED", payload: id });
+                  dispatch({ type: "REMOVE_STARRED", payload: id });
                 }}
               >
-                Star
+                UnStar
               </button>
               <button
                 onClick={() => {

@@ -1,0 +1,22 @@
+.Header-contianer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100px;
+  color: white;
+  background-color: rgb(52, 48, 48);
+}
+a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+}
+.search-box {
+  border: none;
+  border-radius: 15px;
+  width: 350px;
+  height: 40px;
+  align-items: flex-start;
+  margin: 20px;
+}
