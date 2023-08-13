@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useData } from "../Context/CardContext";
-
+import "./DisplayCard.css";
 export const Filter = () => {
   const { dispatch } = useData();
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="filter-container">
       <h1>Filter</h1>
       <div>
         <select

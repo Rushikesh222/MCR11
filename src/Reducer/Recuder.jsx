@@ -57,7 +57,9 @@ export const ReducerMovies = (state, { type, payload }) => {
               (movies) => movies.rating === parseInt(payload)
             );
 
-      return { ...state, searchData: FilterYear };
+      return { ...state, searchData: FilterRating };
+    case "ADD_MOVIE":
+      return { ...state, moviesData: [...state.moviesData, payload] };
 
     default:
       return state;

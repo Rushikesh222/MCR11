@@ -1,43 +1,70 @@
+import { useData } from "../Context/CardContext";
+import "./DisplayCard.css";
 export const DisplayForm = () => {
-  return (
-    <div>
-      <form onSubmit={handelFormData}>
-        <label>
-          Department
-          <select name="department">
-            <option value="Kitchen">Kitchen</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Toys">Toys</option>
-          </select>
-        </label>
+  const { state, dispatch } = useData();
+  const handelFormData = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const titleData = form.title.value;
+    const yearData = form.year.value;
+    const genreData = form.genre.value;
+    const ratingData = form.rating.value;
+    const directorData = form.director.value;
+    const writerData = form.writer.value;
+    const castData = form.cast.value;
+    const imageData = form.image.value;
+    const summaryData = form.summary.value;
 
+    dispatch({
+      type: "ADD_MOVIE",
+      payload: {
+        id: state.moviesData.length + 1,
+        title: titleData,
+        year: yearData,
+        genre: [genreData],
+        rating: ratingData,
+        director: directorData,
+        writer: writerData,
+        cast: [castData],
+        summary: summaryData,
+        imageURL: imageData,
+      },
+    });
+  };
+  return (
+    <div className="form-container">
+      <form onSubmit={handelFormData} className="form-details">
         <label>
-          Name
-          <input type="text" name="name" />
+          Title
+          <input type="text" name="title" />
         </label>
         <label>
-          Description:
-          <input type="textarea" name="description" />
+          Year:
+          <input type="text" name="year" />
         </label>
         <label>
-          Price:
-          <input type="text" name="price" />
+          Genre:
+          <input type="text" name="genre" />
         </label>
         <label>
-          Stock:
-          <input type="text" name="stock" />
+          rating:
+          <input type="text" name="rating" />
         </label>
         <label>
-          SKU:
-          <input type="text" name="sku" />
+          Director:
+          <input type="text" name="director" />
         </label>
         <label>
-          Supplier"
-          <input type="text" name="supplier" />
+          Writer:
+          <input type="text" name="writer" />
         </label>
         <label>
-          Delivered:
-          <input type="text" name="delivered" />
+          Cast:
+          <input type="text" name="cast" />
+        </label>
+        <label>
+          Summary:
+          <input type="textarea" name="summary" />
         </label>
         <label>
           Image Url:
