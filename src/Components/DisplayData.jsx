@@ -10,14 +10,14 @@ export const DisplayData = () => {
       {state?.searchData?.map((items) => {
         const { id, title, summary, imageURL } = items;
         return (
-          <div
-            className="card-block"
-            onClick={() => navigate(`/Details/${id}`)}
-            key={id}
-          >
-            <img className="image" src={imageURL} />
-            <h2>{title}</h2>
-            <p>{summary}</p>
+          <div className="card-block" key={id}>
+            <div className="" onClick={() => navigate(`/Details/${id}`)}>
+              {" "}
+              <img className="image" src={imageURL} />
+              <h2>{title}</h2>
+              <p>{summary}</p>
+            </div>
+
             <div key={id} className="button-blocks">
               <button
                 onClick={() => {
