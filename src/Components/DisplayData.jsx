@@ -4,7 +4,7 @@ import "./DisplayCard.css";
 export const DisplayData = () => {
   const { state, dispatch } = useData();
   const navigate = useNavigate();
-  const handleWishlist = () => {};
+
   return (
     <div className="display-Container">
       {state?.searchData?.map((items) => {

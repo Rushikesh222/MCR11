@@ -71,7 +71,7 @@ export const DisplayForm = () => {
             Image Url:
             <input type="text" name="image" />
           </label>
-        </div>{" "}
+        </div>
         <button>Add Movie</button>
       </form>
     </div>

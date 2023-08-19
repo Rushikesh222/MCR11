@@ -59,7 +59,7 @@ export const ReducerMovies = (state, { type, payload }) => {
 
       return { ...state, searchData: FilterRating };
     case "ADD_MOVIE":
-      return { ...state, moviesData: [...state.moviesData, payload] };
+      return { ...state, searchData: [...state.searchData, payload] };
 
     default:
       return state;
