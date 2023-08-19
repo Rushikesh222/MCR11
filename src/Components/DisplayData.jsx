@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useData } from "../Context/CardContext";
+import { toast } from "react-toastify";
 import "./DisplayCard.css";
 export const DisplayData = () => {
   const { state, dispatch } = useData();
@@ -21,6 +22,7 @@ export const DisplayData = () => {
             <div key={id} className="button-blocks">
               <button
                 onClick={() => {
+                  toast.success("Add to Starred");
                   dispatch({ type: "ADD_STARRED", payload: id });
                 }}
               >
@@ -28,6 +30,7 @@ export const DisplayData = () => {
               </button>
               <button
                 onClick={() => {
+                  toast.success("Add to Wishlist");
                   dispatch({ type: "ADD_WISHLIST", payload: id });
                 }}
               >

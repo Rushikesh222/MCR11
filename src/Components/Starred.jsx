@@ -1,5 +1,5 @@
+import { toast } from "react-toastify";
 import { useData } from "../Context/CardContext";
-
 export const StarredCard = () => {
   const { state, dispatch } = useData();
   return (
@@ -15,6 +15,7 @@ export const StarredCard = () => {
               <button
                 onClick={() => {
                   dispatch({ type: "REMOVE_STARRED", payload: id });
+                  toast.warning("Remove from Starred");
                 }}
               >
                 UnStar
@@ -22,6 +23,7 @@ export const StarredCard = () => {
               <button
                 onClick={() => {
                   dispatch({ type: "ADD_WISHLIST", payload: id });
+                  toast.success("Add to Wishlist");
                 }}
               >
                 Add to Wishlist

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useData } from "../Context/CardContext";
 import "./DisplayCard.css";
 export const DisplayForm = () => {
@@ -30,6 +31,7 @@ export const DisplayForm = () => {
         imageURL: imageData,
       },
     });
+    toast.success("Add a Movie");
   };
   return (
     <div className="form-container">
