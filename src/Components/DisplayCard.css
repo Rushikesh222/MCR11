@@ -28,15 +28,15 @@
   margin: 15px;
 }
 button {
-  width: 120px;
+  width: 20px;
   background-color: rgb(14, 13, 13);
-  height: 45px;
-  border-radius: 25px;
-  font-size: 18px;
+  height: 35px;
+  border-radius: 15px;
+  font-size: 12px;
   font-weight: 700;
   text-align: center;
   color: white;
-  width: 180px;
+  width: 110px;
 }
 button:hover {
   cursor: pointer;
