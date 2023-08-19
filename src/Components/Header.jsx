@@ -16,7 +16,7 @@ export const Header = () => {
         type="text"
         onChange={handleSearch}
         className="search-box"
-        placeholder="Search a movie by its title, cast or director"
+        placeholder="Search a movie by it's title, cast or director"
       />
       <div className="links">
         <NavLink to="/">Movies</NavLink>
